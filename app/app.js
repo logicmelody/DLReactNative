@@ -5,6 +5,8 @@ import Clock from './components/clock';
 
 class App extends Component {
 	render() {
+		console.log('App render');
+
 		return (
 			<View style={styles.container}>
 				<Clock />
