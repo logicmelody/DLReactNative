@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Divider from "ljit-rn-components/divider";
 
 import Clock from './components/clock';
 
@@ -10,6 +11,12 @@ class App extends Component {
 		return (
 			<View style={styles.container}>
 				<Clock />
+
+				<Divider />
+				<Divider />
+				<Divider />
+				<Divider />
+				<Divider />
 			</View>
 		);
 	}
