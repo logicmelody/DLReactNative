@@ -17,6 +17,11 @@ class App extends Component {
 				<Divider />
 				<Divider />
 				<Divider />
+				<Divider />
+				<Divider />
+				<Divider />
+				<Divider />
+				<Divider />
 			</View>
 		);
 	}
