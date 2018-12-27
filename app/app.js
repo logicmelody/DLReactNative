@@ -17,9 +17,10 @@ class App extends Component {
 				<Clock />
 
 				<Text>
-					15
+					16
 				</Text>
 
+				<Divider />
 				<Divider />
 				<Divider />
 				<Divider />
