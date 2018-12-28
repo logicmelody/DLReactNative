@@ -1,0 +1,115 @@
+{
+	"code": "",
+	"name": "",
+	"version": "1.1.7",
+	"releaseVersion": 13,
+	"isSingleLottery": false,
+	"branch": "master",
+	"platform": "huayu",
+	"tabScreens": [
+		{
+			"label": "首页",
+			"screen": "hy.home",
+			"title": ""
+		},
+		{
+			"label": "开奖",
+			"screen": "hy.kai-jiang",
+			"title": "开奖"
+		},
+		{
+			"label": "充提款",
+			"screen": "hy.atm",
+			"title": "充提款"
+		},
+		{
+			"label": "我的",
+			"screen": "hy.settings",
+			"title": "我的"
+		}
+	],
+	"screens": [
+		{
+			"screen": "hy.bet-table",
+			"title": "投注"
+		},
+		{
+			"screen": "hy.xin-yong-bet-table",
+			"title": ""
+		},
+		{
+			"screen": "hy.zhui-hao-bet-table",
+			"title": "智能追号"
+		},
+		{
+			"screen": "hy.shopping-cart",
+			"title": "购物车"
+		},
+		{
+			"screen": "hy.login",
+			"title": "登入"
+		},
+		{
+			"screen": "hy.webview-modal",
+			"title": ""
+		},
+		{
+			"screen": "hy.wallet-navigation-button",
+			"title": ""
+		},
+		{
+			"screen": "hy.logo-navigation-item",
+			"title": ""
+		},
+		{
+			"screen": "hy.play-detail",
+			"title": ""
+		},
+		{
+			"screen": "hy.announcements",
+			"title": "通知公告"
+		}
+	],
+	"tabsStyle": {
+		"tabBarButtonColor": "#5f5f5f",
+		"tabBarSelectedButtonColor": "#ffa200",
+		"forceTitlesDisplay": true,
+		"tabBarBackgroundColor": "white"
+	},
+	"appStyle": {
+		"orientation": "portrait",
+		"tabBarButtonColor": "#5f5f5f",
+		"tabBarSelectedButtonColor": "#ffa200",
+		"tabBarBackgroundColor": "white",
+		"forceTitlesDisplay": true
+	},
+	"mode": "development",
+	"local": {
+		"name": "hy-local",
+		"hostname": "http://localhost",
+		"port": "3001",
+		"backgroundJobLatency": 3000,
+		"apiVersion": "v1"
+	},
+	"development": {
+		"name": "hy-development",
+		"hostname": "http://13.209.87.62",
+		"port": "3000",
+		"backgroundJobLatency": 2500,
+		"apiVersion": "v1"
+	},
+	"pre-production": {
+		"name": "hy-pre-production",
+		"hostname": "http://pre-production-vegas-25994988.ap-northeast-1.elb.amazonaws.com",
+		"port": "80",
+		"backgroundJobLatency": 2500,
+		"apiVersion": "v1"
+	},
+	"production": {
+		"name": "hy-production",
+		"hostname": "https://api.honze88.com",
+		"port": "443",
+		"backgroundJobLatency": 2500,
+		"apiVersion": "v1"
+	}
+}
