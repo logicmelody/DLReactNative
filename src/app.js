@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import {
-	StyleSheet,
 	View,
 } from 'react-native';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+
+import styles from "./styles";
 
 import reducers from './reducers';
 
@@ -16,7 +17,9 @@ class App extends Component {
 	render() {
 		return (
 			<Provider store={store}>
-				<Clock />
+				<View style={styles.container}>
+					<Clock />
+				</View>
 			</Provider>
 		);
 	}
