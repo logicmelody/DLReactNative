@@ -18,7 +18,10 @@ const RepoItem = (props) => {
 		>
 			<View style={itemStyle}>
 				<Text style={styles.title}>{name}</Text>
+
 				<Text style={styles.stars}>{`${stargazers_count} stars`}</Text>
+
+				{props.isSelected ? <Text>{description}</Text> : null}
 			</View>
 		</TouchableHighlight>
 	);

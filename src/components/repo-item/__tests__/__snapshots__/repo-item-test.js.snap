@@ -89,6 +89,9 @@ exports[`RepoItem renders correctly, isSelected = true 1`] = `
     >
       50000 stars
     </Text>
+    <Text>
+      Useful description goes here.
+    </Text>
   </View>
 </View>
 `;
