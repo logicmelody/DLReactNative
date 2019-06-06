@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Rendering should match to snapshot - Primary 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#38ba7d",
+      "borderBottomColor": "#1e6343",
+      "borderBottomWidth": 6,
+      "borderWidth": 1,
+      "height": 45,
+      "justifyContent": "center",
+      "marginLeft": 15,
+      "marginRight": 15,
+      "opacity": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "#ffffff",
+        "fontSize": 16,
+        "fontWeight": "600",
+      }
+    }
+  >
+    test label
+  </Text>
+</View>
+`;
+
+exports[`Button Rendering should match to snapshot - Secondary 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#f34541",
+      "borderBottomColor": "#a43532",
+      "borderBottomWidth": 6,
+      "borderWidth": 1,
+      "height": 45,
+      "justifyContent": "center",
+      "marginLeft": 15,
+      "marginRight": 15,
+      "opacity": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "#ffffff",
+        "fontSize": 16,
+        "fontWeight": "600",
+      }
+    }
+  >
+    test label
+  </Text>
+</View>
+`;
