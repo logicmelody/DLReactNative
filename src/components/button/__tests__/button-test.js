@@ -3,6 +3,14 @@ import Button from '../index';
 
 import renderer from 'react-test-renderer';
 
+const mockOpenURL = jest.fn();
+const mockOnPress = jest.fn();
+
+// 1. Set openURL module function to jest.fn
+jest.mock('Linking', () => ({
+	openURL: mockOpenURL,
+}));
+
 describe('Button', () => {
 	describe('Rendering', () => {
 		test('should match to snapshot - Primary', () => {
@@ -11,10 +19,10 @@ describe('Button', () => {
 					label="test label"
 				/>
 			);
-	
+
 			expect(component).toMatchSnapshot();
 		});
-	
+
 		test('should match to snapshot - Secondary', () => {
 			const component = renderer.create(
 				<Button
@@ -22,38 +30,53 @@ describe('Button', () => {
 					primary={false}
 				/>
 			);
-	
+
 			expect(component).toMatchSnapshot();
 		});
 	});
 
 	describe('Interaction', () => {
 		describe('onPressHandler', () => {
-			test('should call onPress', () => {
-				// Arrange
-				// 1. mock function
-				const mockOnPress = jest.fn();
+			let instance;
 
-				// 2. passing in mock function as props
-				const component = renderer.create(
+			beforeEach(() => {
+				instance = renderer.create(
+					<Button
+						label="test label"
+						onPress={mockOnPress}
+						url="https://www.test.com"
+					/>
+				).getInstance();
+
+				jest.clearAllMocks();
+			});
+
+			test('should call onPress', () => {
+				instance.onPressHandler();
+
+				expect(mockOnPress).toHaveBeenCalled();
+				expect(mockOnPress).toHaveBeenCalledTimes(1);
+			});
+
+			test('should call openURL if url is provided', () => {
+				instance.onPressHandler();
+
+				expect(mockOpenURL).toHaveBeenCalled();
+				expect(mockOpenURL).toHaveBeenCalledTimes(1);
+				expect(mockOpenURL).toHaveBeenCalledWith('https://www.test.com');
+			});
+
+			test('should not call openURL if url is nor provided', () => {
+				const innerInstance = renderer.create(
 					<Button
 						label="test label"
 						onPress={mockOnPress}
 					/>
-				);
+				).getInstance();
 
-				// 3. getting an instance of component
-				const instance = component.getInstance();
+				innerInstance.onPressHandler();
 
-				// Act
-				// 4. manually triggering onPressHandler()
-				instance.onPressHandler();
-
-				// Assert
-				expect(mockOnPress).toHaveBeenCalled();
-
-				// 5. checking return values
-				expect(mockOnPress).toHaveBeenCalledTimes(1);
+				expect(mockOpenURL).not.toHaveBeenCalled();
 			});
 		});
 	});
