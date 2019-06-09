@@ -8,7 +8,10 @@ import registerScreens from './register-screens';
 
 const store = createStore(reducers, {});
 
-const startApp = () => {
+registerScreens(store, Provider);
+startApp();
+
+function startApp() {
 	Navigation.startTabBasedApp({
 		tabs: [
 			{
@@ -25,9 +28,12 @@ const startApp = () => {
 				// selectedIcon: require('./img/second-selected.png'), // iOS only
 				title: 'Screen 2',
 			}
-		]
+		],
+		tabsStyle: {
+			tabBarButtonColor: '#ff0000',
+			tabBarSelectedButtonColor: '#ffa200',
+			tabBarBackgroundColor: '#551A8B',
+			forceTitlesDisplay: true,
+		}
 	});
 }
-
-registerScreens(store, Provider);
-startApp();

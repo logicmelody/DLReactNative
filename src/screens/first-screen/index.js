@@ -9,6 +9,10 @@ import { connect } from 'react-redux';
 import styles from './styles';
 
 class FirstScreen extends Component {
+	static navigatorStyle = {
+		navBarHidden: true,
+	};
+
 	render() {
 		return (
 			<View style={styles.container}>
